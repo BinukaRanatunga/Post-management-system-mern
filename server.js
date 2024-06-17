@@ -12,8 +12,10 @@ const postRoutes = require('./routes/post');
 app.use(bodyParser.json());
 
 //routes middleware
-app.use(postRoutes);
 app.use(cors());
+
+//routes middleware
+app.use(postRoutes);
 
 const PORT = 8000;
 
