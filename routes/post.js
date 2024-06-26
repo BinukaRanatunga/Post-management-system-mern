@@ -26,7 +26,7 @@ router.get('/posts', async (req, res) => {
 });
 
 //get specific post using id
-router.get('/post/:id', async (req, res) => {
+router.get('/posts/:id', async (req, res) => {
     try {
         const post = await Post.findById(req.params.id).exec();
         if (!post) {
