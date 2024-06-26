@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link,useNavigate  } from 'react-router-dom';
+import { FaSearch } from 'react-icons/fa';
+
 
 const PostsComponent = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -23,6 +28,17 @@ const PostsComponent = () => {
     fetchPosts();
   }, []);
 
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const filteredPosts = posts.filter(post =>
+    post.topic.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    post.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    post.postCategory.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -32,6 +48,7 @@ const PostsComponent = () => {
   }
   const handleEdit = (id) => {
     // Handle the edit action here
+    navigate(`/edit/${id}`);
     console.log("Edit post with id:", id);
   };
 
@@ -45,9 +62,28 @@ const PostsComponent = () => {
     }
   };
 
+
+
   return (
     <div className="container mt-4">
-      <h1 className="mb-4">Posts</h1>
+    <div className="d-flex justify-content-between align-items-center mb-4">
+      <h1 className="mb-0">Posts</h1>
+      <div className="input-group w-50">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Search posts..."
+          value={searchTerm}
+          onChange={handleSearch}
+        />
+        <div className="input-group-append">
+          <span className="input-group-text" style={{ color: 'red' }}>
+            Search
+          </span>
+        </div>
+      </div>
+    </div>
+
       <table className="table table-striped">
         <thead>
           <tr>
@@ -59,7 +95,7 @@ const PostsComponent = () => {
           </tr>
         </thead>
         <tbody>
-          {posts.map((post, index) => (
+          {filteredPosts.map((post, index) => (
             <tr key={post._id}>
               <th scope="row">{index + 1}</th>
               <td>
@@ -73,7 +109,7 @@ const PostsComponent = () => {
                   className="btn btn-primary btn-sm me-2"
                   onClick={() => handleEdit(post._id)}
                 >
-                  Edit
+                edit
                 </button>
                 <button
                   className="btn btn-danger btn-sm"
@@ -88,8 +124,7 @@ const PostsComponent = () => {
       </table>
 
       <button className="btn btn-success btn-sm me-2">
-        <a href="/add"></a>
-        Add Post
+      <Link className="nav-link" to="/add">Add Post</Link>
       </button>
     </div>
   );

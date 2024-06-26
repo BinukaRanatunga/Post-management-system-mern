@@ -12,12 +12,6 @@ export default class NavBar extends Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/add">Create Post</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/edit/:id">Edit Post</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/post/:id">Post Details</Link>
-              </li>
             </ul>
           </div>
         </div>

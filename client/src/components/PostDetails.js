@@ -31,9 +31,11 @@ function PostDetails() {
   return (
     <div className="container mt-4">
       <h1>Post Details</h1>
-      <h2>{post.topic}</h2>
-      <p>{post.description}</p>
-      <p>{post.postCategory}</p>
+      *******************************
+      
+      <p>Topic : {post.topic}</p>
+      <p>Description : {post.description}</p>
+      <p>PostCategory : {post.postCategory}</p>
     </div>
   );
 }
