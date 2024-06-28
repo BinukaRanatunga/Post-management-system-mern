@@ -25,6 +25,20 @@ router.get('/posts', async (req, res) => {
     }
 });
 
+//get specific post using id
+router.get('/posts/:id', async (req, res) => {
+    try {
+        const post = await Post.findById(req.params.id).exec();
+        if (!post) {
+            return res.status(404).json({ error: "Post not found" });
+        }
+        res.status(200).json({ post });
+    } catch (err) {
+        console.error('Get post error:', err); // Log the error for debugging
+        res.status(400).json({ error: err.message || err });
+    }
+});
+
 // Update post
 router.put('/post/update/:id', async (req, res) => {
     try {
