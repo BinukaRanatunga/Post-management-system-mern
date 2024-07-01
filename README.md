@@ -24,12 +24,14 @@ Update: Users can update their own posts.
 Delete: Users can delete their own posts.
 
 Key Components:
-Frontend:
+
+1.Frontend
 
 React: Handles the user interface and interactions.
 MDBReact: Provides UI components for a modern and responsive design.
 React Router: Manages navigation between different pages like login, registration, and home.
-Backend:
+
+2.Backend
 
 Node.js: Server-side runtime environment.
 Express: Web framework for building the API and handling requests.
