@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from 'react-router-dom';
 
 const CreatePostForm = () => {
   // State variables to store form data
@@ -9,6 +10,8 @@ const CreatePostForm = () => {
   const [postCategory, setPostCategory] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+
+  const navigate = useNavigate();
 
   // Function to handle form submission
   const handleSubmit = async (e) => {
@@ -20,7 +23,9 @@ const CreatePostForm = () => {
       postCategory
     };
 
+
     console.log('Post data:', postData);
+
 
     try {
       const response = await axios.post('http://localhost:8000/post/save', postData);
@@ -32,6 +37,7 @@ const CreatePostForm = () => {
       setTopic('');
       setDescription('');
       setPostCategory('');
+      navigate('/home');
     } catch (err) {
       console.error('Error submitting post:', err);
       setError('Error submitting post');
