@@ -1,18 +1,22 @@
 # post-management-system
 
 Functionalities:
-User Registration:
+
+1.User Registration
 
 Users can create a new account by providing their first name, last name, email, and password.
 Passwords are securely hashed before being stored in the database.
-User Login:
+
+2.User Login
 
 Registered users can log in using their email and password.
 Successful login returns a JWT (JSON Web Token) for authentication.
-Authentication:
+
+3.Authentication
 
 JWTs are used to secure API endpoints, ensuring only authenticated users can access certain functionalities.
-Post Management:
+
+4.Post Management
 
 Create: Authenticated users can create new posts.
 Read: Users can view a list of posts.
