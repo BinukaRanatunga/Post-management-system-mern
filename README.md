@@ -39,19 +39,21 @@ MongoDB: NoSQL database for storing user and post data.
 Mongoose: ODM (Object Data Modeling) library for MongoDB and Node.js.
 
 Login page
-![image](https://github.com/BinukaRanatunga/post-management-system/assets/120770401/8e1833da-d6e0-487d-86e9-9649ceaf0a9a)
+![image](https://github.com/BinukaRanatunga/Post-management-system-mern/assets/120770401/bd792d2d-8ec3-4eb8-bed0-da6d092dfbc6)
+
 
 Register page
-![image](https://github.com/BinukaRanatunga/post-management-system/assets/120770401/b586b375-5943-4580-b664-9c1edb35da26)
+![image](https://github.com/BinukaRanatunga/Post-management-system-mern/assets/120770401/9bb42f7c-2c3f-4a09-8b0b-59580d748356)
+
 
 Home Page
-![image](https://github.com/BinukaRanatunga/post-management-system/assets/120770401/f89430b7-46be-4156-9387-5e3f0bb18d9b)
+
 
 Create post page
-![image](https://github.com/BinukaRanatunga/post-management-system/assets/120770401/419adad5-d973-4ab1-8b58-3c61917a05c7)
+
 
 Update Post
-![image](https://github.com/BinukaRanatunga/post-management-system/assets/120770401/bc33835d-03cf-4297-9a0f-ef03e0f9109b)
+
 
 Search function
 ![image](https://github.com/BinukaRanatunga/post-management-system/assets/120770401/b0125cc1-a82f-4554-94d7-ecb8c6c47bc1)
