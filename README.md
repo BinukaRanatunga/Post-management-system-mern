@@ -47,16 +47,21 @@ Register page
 
 
 Home Page
+![image](https://github.com/BinukaRanatunga/Post-management-system-mern/assets/120770401/012d3af0-a48b-4b5e-8208-c919864e393e)
 
 
 Create post page
+![image](https://github.com/BinukaRanatunga/Post-management-system-mern/assets/120770401/80457bd3-3ead-4023-8937-dc24a7c89569)
 
 
 Update Post
+![image](https://github.com/BinukaRanatunga/Post-management-system-mern/assets/120770401/1781b1f1-a232-4c2e-bb15-17d7c548945d)
 
 
 Search function
-![image](https://github.com/BinukaRanatunga/post-management-system/assets/120770401/b0125cc1-a82f-4554-94d7-ecb8c6c47bc1)
+![image](https://github.com/BinukaRanatunga/Post-management-system-mern/assets/120770401/1cbd00d5-3708-485d-b56e-2f6889371e19)
+
+
 
 
 
